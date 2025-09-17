@@ -1,0 +1,12 @@
+public
+resources
+assets/jsconfig.json
+.hugo_build.lock
+
+i18n/**
+!i18n/zh-cn.yaml
+!i18n/en.yaml
+go.mod
+theme/**/content/**
+theme/**/README.md
+theme/**/LICENSE
