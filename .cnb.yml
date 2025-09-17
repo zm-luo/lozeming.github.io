@@ -1,0 +1,22 @@
+main:
+  push:
+    - stages:
+        - name: sync to github
+          image: tencentcom/git-sync
+          imports: https://cnb.cool/zm.luo/secret/-/blob/main/gh_zm.luo.env
+          settings:
+            target_url: https://github.com/zm-luo/lozeming.github.io.git
+            auth_type: https
+            branch: main
+            username: ${user_name}
+            password: ${lozeming}
+
+$:
+  vscode:
+    - docker:
+        image: docker.cnb.cool/zm.luo/dev-env
+      runner:
+        cpus: 4
+      services:
+        - vscode
+        - docker
